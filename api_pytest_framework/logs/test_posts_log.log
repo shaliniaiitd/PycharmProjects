@@ -1,1 +1,5 @@
-INFO     test_logger:custom_logger.py:23  Function test_create_user_by_payload took 0.66250324 seconds
+INFO     test_logger:custom_logger.py:23  Function test_create_user_by_payload took 0.58935690 seconds
+INFO     test_logger:custom_logger.py:23 STARTING test_get_all_posts
+INFO     test_logger:custom_logger.py:23 100
+INFO     test_logger:custom_logger.py:23  Function test_get_all_posts took 0.27181292 seconds
+INFO     test_logger:custom_logger.py:23  Function test_get_post_by_userId_id took 0.00000000 seconds

@@ -64,7 +64,6 @@ class Test_weather(BaseTest):
           url = 'http://api.openweathermap.org/geo/1.0/direct'
           params = {"q":f"{cityname},{state_name},{country_code}", "limit": 5, "appid": self.env_dict["API_KEY"] }
 
-
           resp = requests.get(url,params = params)
           self.logger.info(resp.url)
           assert resp.status_code == 200
@@ -125,7 +124,7 @@ class Test_weather(BaseTest):
 
           params = request.config.cache.get("params", None)
           print(params)
-          resp = requests.get(url,json = json.dumps(data), params = params, headers = {"content-type": 'application/json'})
+          resp = requests.put(url,json = json.dumps(data), params = params, headers = {"content-type": 'application/json'})
 
           assert resp.status_code == 400
           assert resp.json()["code"] == 400001
@@ -183,10 +182,12 @@ class Test_weather(BaseTest):
           params = {"appid": self.env_dict["API_KEY"]}
           resp = requests.put(url,params =params, json=data, headers={"Accept": "application/text"})
           print(resp.url)
-          expected_resp = "{'id': '6553fbae8885c200018ae762', 'created_at': '2023-11-14T22:58:54.585Z', 'updated_at': '2023-11-15T08:50:09.932249796Z', 'external_id': '1', 'name': 'Changed Station name', 'longitude': 0, 'latitude': 0, 'altitude': None, 'rank': 0}"
-          exp_resp =  {"id":"6553fbae8885c200018ae762","created_at":"2023-11-14T22:58:54.585Z","updated_at":"2023-11-15T09:04:04.903698465Z","external_id":"1","name":"Changed Station name","longitude":0,"latitude":0,"altitude":None,"rank":0}
 
-          self.logger.info(f"resp.text  {resp.text}")
+          expected_resp = {'id': '6553fbae8885c200018ae762', 'created_at': '2023-11-14T22:58:54.585Z', 'updated_at': '2023-11-15T08:50:09.932249796Z', 'external_id': '1', 'name': 'Changed Station name', 'longitude': 0, 'latitude': 0, 'altitude': None, 'rank': 0}
+          del expected_resp["updated_at"]
+          exp_resp =  {"id":"6553fbae8885c200018ae762","created_at":"2023-11-14T22:58:54.585Z","updated_at":"2023-11-15T09:04:04.903698465Z","external_id":"1","name":"Changed Station name","longitude":0,"latitude":0,"altitude":None,"rank":0}
+          del exp_resp['updated_at']
+          self.logger.info(f"resp.headers  {resp.headers}")
 
           assert expected_resp == str(resp.json())
 
