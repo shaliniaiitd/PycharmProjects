@@ -1,0 +1,14 @@
+2023-11-12 21:56:14,362 [INFO] -  Function test_create_user_by_payload took 1.09427166 seconds
+2023-11-12 21:56:14,366 [INFO] - STARTING test_get_all_posts
+2023-11-12 21:56:14,658 [INFO] - 100
+2023-11-12 21:56:14,660 [INFO] -  Function test_get_all_posts took 0.29322124 seconds
+2023-11-12 21:56:14,662 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-12 22:21:39,295 [INFO] -  Function test_create_user_by_payload took 0.84365582 seconds
+2023-11-12 22:21:39,300 [INFO] - STARTING test_get_all_posts
+2023-11-12 22:21:39,888 [INFO] - 100
+2023-11-12 22:21:39,889 [INFO] -  Function test_get_all_posts took 0.58850789 seconds
+2023-11-12 22:21:39,892 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-12 22:21:39,907 [INFO] - USING QUERY PARAMS
+2023-11-12 22:21:39,908 [INFO] - Logging into https://reqres.in/api/users
+2023-11-12 22:21:41,039 [INFO] - Logging into https://reqres.in/api/login with credentials {"email": "eve.holt@reqres.in","password": "cityslicka"}
+2023-11-12 22:21:41,458 [INFO] - Got token as QpwL5tke4Pnpja7X4

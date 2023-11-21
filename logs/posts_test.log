@@ -1,0 +1,11 @@
+2023-11-16 12:28:39,102 [INFO] -  Function test_create_user_by_payload took 0.66250324 seconds
+2023-11-16 12:32:29,034 [INFO] -  Function test_create_user_by_payload took 1.03542900 seconds
+2023-11-16 12:32:29,040 [INFO] - STARTING test_get_all_posts
+2023-11-16 12:32:29,236 [INFO] - 100
+2023-11-16 12:32:29,237 [INFO] -  Function test_get_all_posts took 0.19718575 seconds
+2023-11-16 12:32:29,241 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-16 12:35:34,135 [INFO] -  Function test_create_user_by_payload took 0.58935690 seconds
+2023-11-16 12:35:34,146 [INFO] - STARTING test_get_all_posts
+2023-11-16 12:35:34,416 [INFO] - 100
+2023-11-16 12:35:34,418 [INFO] -  Function test_get_all_posts took 0.27181292 seconds
+2023-11-16 12:35:34,426 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds

@@ -1,0 +1,66 @@
+2023-11-07 15:05:06,885 [INFO] - STARTING test_get_all_posts
+2023-11-07 15:05:07,024 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-08 13:27:20,202 [INFO] - STARTING test_get_all_posts
+2023-11-08 13:27:20,481 [INFO] -  Function test_get_all_posts took 0.27899933 seconds
+2023-11-08 13:27:20,483 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-08 13:29:51,033 [INFO] -  Function test_create_user_by_payload took 1.12431765 seconds
+2023-11-08 13:29:51,035 [INFO] - STARTING test_get_all_posts
+2023-11-08 13:29:51,240 [INFO] -  Function test_get_all_posts took 0.20449352 seconds
+2023-11-08 13:29:51,243 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-08 13:30:09,875 [INFO] -  Function test_create_user_by_payload took 1.03450680 seconds
+2023-11-08 13:30:09,881 [INFO] - STARTING test_get_all_posts
+2023-11-08 13:30:10,102 [INFO] -  Function test_get_all_posts took 0.22010756 seconds
+2023-11-08 13:30:10,106 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-12 21:56:14,362 [INFO] -  Function test_create_user_by_payload took 1.09427166 seconds
+2023-11-12 21:56:14,366 [INFO] - STARTING test_get_all_posts
+2023-11-12 21:56:14,658 [INFO] - 100
+2023-11-12 21:56:14,660 [INFO] -  Function test_get_all_posts took 0.29322124 seconds
+2023-11-12 21:56:14,662 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-12 22:21:39,295 [INFO] -  Function test_create_user_by_payload took 0.84365582 seconds
+2023-11-12 22:21:39,300 [INFO] - STARTING test_get_all_posts
+2023-11-12 22:21:39,888 [INFO] - 100
+2023-11-12 22:21:39,889 [INFO] -  Function test_get_all_posts took 0.58850789 seconds
+2023-11-12 22:21:39,892 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-12 22:21:39,907 [INFO] - USING QUERY PARAMS
+2023-11-12 22:21:39,908 [INFO] - Logging into https://reqres.in/api/users
+2023-11-12 22:21:41,039 [INFO] - Logging into https://reqres.in/api/login with credentials {"email": "eve.holt@reqres.in","password": "cityslicka"}
+2023-11-12 22:21:41,458 [INFO] - Got token as QpwL5tke4Pnpja7X4
+2023-11-15 03:06:13,779 [INFO] -  Function test_create_user_by_payload took 0.52367067 seconds
+2023-11-15 03:06:13,785 [INFO] - STARTING test_get_all_posts
+2023-11-15 03:06:14,046 [INFO] - 100
+2023-11-15 03:06:14,046 [INFO] -  Function test_get_all_posts took 0.26112604 seconds
+2023-11-15 03:06:14,051 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-15 03:21:03,653 [INFO] -  Function test_create_user_by_payload took 0.54875898 seconds
+2023-11-15 03:21:03,658 [INFO] - STARTING test_get_all_posts
+2023-11-15 03:21:03,895 [INFO] - 100
+2023-11-15 03:21:03,896 [INFO] -  Function test_get_all_posts took 0.23795128 seconds
+2023-11-15 03:21:03,900 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-15 03:25:07,155 [INFO] -  Function test_create_user_by_payload took 0.97642875 seconds
+2023-11-15 03:25:07,163 [INFO] - STARTING test_get_all_posts
+2023-11-15 03:25:07,361 [INFO] - 100
+2023-11-15 03:25:07,362 [INFO] -  Function test_get_all_posts took 0.19883585 seconds
+2023-11-15 03:25:07,367 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-15 03:31:34,178 [INFO] -  Function test_create_user_by_payload took 1.01422715 seconds
+2023-11-15 03:31:34,185 [INFO] - STARTING test_get_all_posts
+2023-11-15 03:31:34,450 [INFO] - 100
+2023-11-15 03:31:34,451 [INFO] -  Function test_get_all_posts took 0.26560831 seconds
+2023-11-15 03:31:34,457 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-15 04:23:19,267 [INFO] -  Function test_create_user_by_payload took 1.03733659 seconds
+2023-11-15 04:23:19,273 [INFO] - STARTING test_get_all_posts
+2023-11-15 04:23:19,532 [INFO] - 100
+2023-11-15 04:23:19,534 [INFO] -  Function test_get_all_posts took 0.25978851 seconds
+2023-11-15 04:23:19,538 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-15 04:27:01,799 [INFO] -  Function test_create_user_by_payload took 1.00105977 seconds
+2023-11-15 04:27:01,804 [INFO] - STARTING test_get_all_posts
+2023-11-15 04:27:02,011 [INFO] - 100
+2023-11-15 04:27:02,012 [INFO] -  Function test_get_all_posts took 0.20814562 seconds
+2023-11-15 04:27:02,015 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-15 04:28:43,195 [INFO] -  Function test_create_user_by_payload took 0.52430987 seconds
+2023-11-15 04:28:43,201 [INFO] - STARTING test_get_all_posts
+2023-11-15 04:28:43,447 [INFO] - 100
+2023-11-15 04:28:43,448 [INFO] -  Function test_get_all_posts took 0.24707150 seconds
+2023-11-15 04:28:43,454 [INFO] -  Function test_get_post_by_userId_id took 0.00000000 seconds
+2023-11-15 04:40:18,833 [INFO] -  Function test_create_user_by_payload took 0.64297009 seconds
+2023-11-15 04:40:18,839 [INFO] - STARTING test_get_all_posts
+2023-11-15 04:40:19,100 [INFO] - 100
+2023-11-15 04:40:19,102 [INFO] -  Function test_get_all_posts took 0.26195335 seconds
