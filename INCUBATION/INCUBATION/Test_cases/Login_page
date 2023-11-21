@@ -1,0 +1,48 @@
+UI test scenarios:
+All labels appear - proper font and color
+All input boxes appear
+
+Functional test cases:
+opening cursor is on the first field
+verify that tabbing leads to susequent fields
+verify all input boxes are accepting inputs.
+verify that password input is masked
+verify blank username/password displays error message and halts the action
+Check if the password can be copy-pasted or not.
+Verify that authentication rules/steps are followed for valid login.
+If there are rile based login, check for proper authorization of the user.
+
+Security test cases:
+verify that username and password rules are enforced
+Filled username and password fields timeout if Login button is not hit
+Login page times out after sometime.
+
+Boundary value checks:
+check that input field length check exists
+
+State transition checks:
+check that after successful login home page is displayed
+clicking back does not logout the user
+Verify that closing the browser should not log out an authenticated user.
+Launching the application should lead the user to the login state only.
+
+Performance test:
+Monitor the response time for login
+Monitor response time to display error message
+Load the login page with simultaneous users and check the response time.
+
+DB testing:
+Check that the valid user entry is made in the relavant tables in database.
+Check that all required error messages are present in database tables.
+
+
+
+Positive cases:
+valid user_id and password
+home page is reached.
+
+Negative cases:
+Invalid username, valid password
+Valid username, invalid password
+Invalid user, Invalid password
+Null user, null password

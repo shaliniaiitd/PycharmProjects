@@ -1,0 +1,20 @@
+import requests
+
+# Replace 'your_api_key' with your actual API key
+api_key = 'your_api_key'
+
+# Example API endpoint
+url = 'https://api.example.com/resource'
+
+# Set the 'api-key' header with your API key
+headers = {'api-key': api_key}
+
+# Send a GET request with the API key in the headers
+response = requests.get(url, headers=headers)
+
+# Process the response
+if response.status_code == 200:
+    data = response.json()
+    print(data)
+else:
+    print(f'Request failed with status code: {response.status_code}')

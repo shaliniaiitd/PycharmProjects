@@ -1,0 +1,29 @@
+import requests
+
+# Example API endpoint that provides a JWT token
+token_url = 'https://api.example.com/token'
+
+# Replace these with your credentials or request parameters, if required
+username = 'your_username'
+password = 'your_password'
+
+# Send a POST request to the token endpoint to obtain the JWT token
+data = {
+    'username': username,
+    'password': password
+}
+
+response = requests.post(token_url, data=data)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Extract the JWT token from the response
+    token_data = response.json()
+    jwt_token = token_data.get('token')
+
+    if jwt_token:
+        print(f'Received JWT token: {jwt_token}')
+    else:
+        print('JWT token not found in the response.')
+else:
+    print(f'Request failed with status code: {response.status_code}')

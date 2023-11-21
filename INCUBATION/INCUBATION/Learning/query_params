@@ -1,0 +1,17 @@
+import requests
+
+# Example URL with query parameters
+url = "https://api.example.com/search"
+
+# Query parameters as a dictionary
+query_params = {
+    "q": "search_term",
+    "limit": 10
+}
+
+# Send a GET request with query parameters
+response = requests.get(url, params=query_params)
+
+# Process the response
+print(response.text)
+

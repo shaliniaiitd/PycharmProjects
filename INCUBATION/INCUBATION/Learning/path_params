@@ -1,0 +1,10 @@
+import requests
+
+# Example URL with a path parameter
+url = "https://api.example.com/users/123"
+
+# Send a GET request
+response = requests.get(url)
+
+# Process the response
+print(response.text)

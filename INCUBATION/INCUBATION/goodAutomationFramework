@@ -1,0 +1,35 @@
+Reusability One of the qualities that makes up a good test automation framework is reusability. ...
+Maintainability Have you ever worked on a test automation framework where the effort to maintain the tests is much higher than actually writing the test? ...
+Scalability ...
+Framework Extensions ...
+Ease of Use/Adoption ...
+
+
+Key Elements of Effective Test Automation Strategy
+1. A well-trained test automation team
+2. Right tool for automated software testing
+3. Strong test automation framework
+4. Support for Integration with needed tools
+i. Test Management Tool
+ii. Bug Tracking Tool
+iii. Continuous Integration (CI) Tool
+5. Availability of realistic test environments and executions
+6. Support for proper reporting
+
+What are the key elements of a good automation framework?
+Key elements of a good automation framework are
+
+It should be capable enough to manage the test case and test data of the whole project without facing any difficulties.
+It should be powerful enough to target even the complicated software elements to automate the user action for test automation.
+It should be flexible enough to integrate third-party tools like Jira, Mantis, and XRay to increase productivity.
+A good test automation framework should not be hard to learn for you or your team members.
+
+There are various types of test automation frameworks in the market, which can be categorized into six categories:
+
+Linear testing framework
+Modular testing framework
+Behavior-driven
+Data-driven
+Keyword driven
+Hybrid framework
+

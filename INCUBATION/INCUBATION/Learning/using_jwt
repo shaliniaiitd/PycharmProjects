@@ -1,0 +1,20 @@
+import requests
+
+# Replace 'your_jwt_token' with your actual JWT token
+jwt_token = 'your_jwt_token'
+
+# Example API endpoint
+url = 'https://api.example.com/resource'
+
+# Set the 'Authorization' header with the JWT token
+headers = {'Authorization': f'Bearer {jwt_token}'}
+
+# Send a GET request with the JWT token in the headers
+response = requests.get(url, headers=headers)
+
+# Process the response
+if response.status_code == 200:
+    data = response.json()
+    print(data)
+else:
+    print(f'Request failed with status code: {response.status_code}')
