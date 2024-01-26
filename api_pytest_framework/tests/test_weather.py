@@ -1,7 +1,7 @@
 import requests
 import json
 import pytest
-from tests.test_base import BaseTest
+from test_base import BaseTest
 from PIL import Image
 from io import BytesIO
 import os
@@ -60,7 +60,7 @@ class Test_weather(BaseTest):
 
 
       @pytest.mark.parametrize("cityname, state_name, country_code", [('New Delhi','Delhi', 'IN')])
-      def test_get_new_delhi_coordinates(self,cityname, state_name, country_code, request ):
+      def test_get_new_delhi_coordinates(self,cityname, state_name, country_code,request):
           url = 'http://api.openweathermap.org/geo/1.0/direct'
           params = {"q":f"{cityname},{state_name},{country_code}", "limit": 5, "appid": self.env_dict["API_KEY"] }
 

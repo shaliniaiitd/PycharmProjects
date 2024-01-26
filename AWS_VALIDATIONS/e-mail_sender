@@ -1,0 +1,96 @@
+# from pyspark.sql import SparkSession
+
+from pyspark.sql.functions import *
+import openpyxl
+
+import pandas as pd
+import os
+
+import smtplib
+
+from email.mime.multipart import MIMEMultipart
+
+from email.mime.text import MIMEText
+
+from email.mime.base import MIMEBase
+
+from email import encoders
+
+# Outlook email account details
+
+sender_email = 'bddtester06@gmail.com'
+
+sender_password = 'passw0rd@6'
+
+receiver_email = 'shalinia20422@outlook.com'
+#
+# # Databricks connection details
+#
+# spark = SparkSession.builder \
+#  \
+#     .appName("Databricks to Excel") \
+#  \
+#     .config("spark.databricks.service.server.enabled", "true") \
+#  \
+#     .config("spark.databricks.service.port", "15001") \
+#  \
+#     .getOrCreate()
+#    # .config("spark.databricks.service.token", "your_databricks_token") \
+#
+#
+# # Databricks query to retrieve the data from the table
+#
+query = "SELECT * FROM `altrata_data_lake_test`.`synthetic_validation_database`.`pipeline_validation_report`"
+#
+# # Read data from Databricks table
+#
+df = spark.sql(query)
+# #
+# # # Convert DataFrame to Pandas DataFrame
+# #
+pandas_df = df.toPandas()
+# #
+# # # Convert Pandas DataFrame to Excel
+# #
+excel_file = 'data.xlsx'
+# #
+pandas_df.to_excel(excel_file, index=False)
+#
+# # Prepare the email
+
+msg = MIMEMultipart()
+
+msg['From'] = sender_email
+
+msg['To'] = receiver_email
+
+msg['Subject'] = 'Data Export'
+#
+# # Attach the Excel file to the email
+#
+attachment = open(excel_file, 'rb')
+#
+part = MIMEBase('application', 'octet-stream')
+#
+part.set_payload(attachment.read())
+#
+encoders.encode_base64(part)
+#
+part.add_header('Content-Disposition', 'attachment', filename=excel_file)
+#
+msg.attach(part)
+#
+# # Send the email using SMTP
+#
+with smtplib.SMTP('smtp.gmail.com', 25) as server:
+    server.starttls()
+
+    server.login(sender_email, sender_password)
+
+    server.sendmail(sender_email, receiver_email, msg.as_string())
+
+# # Delete the Excel file
+#
+attachment.close()
+#
+os.remove(excel_file)

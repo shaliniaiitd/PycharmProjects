@@ -1,0 +1,22 @@
+{
+    "name": "Shalini Agarwal",
+    "username": "shalini",
+    "email": "abc@def.com",
+    "address": {
+        "street": "Victor Plains",
+        "suite": "Suite 879",
+        "city": "Wisokyburgh",
+        "zipcode": "535002",
+        "geo": {
+            "lat": "-43.9509",
+            "lng": "-34.4618"
+        }
+    },
+    "phone": "62813009571234",
+    "website": "anastasia.net",
+    "company": {
+        "name": "Deckow-Crist",
+        "catchPhrase": "Proactive didactic contingency",
+        "bs": "synergize scalable supply-chains"
+    }
+}

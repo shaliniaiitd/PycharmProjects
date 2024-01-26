@@ -6,7 +6,7 @@ import requests
 
 import pytest
 
-from utilities.custom_logger import Logger
+from ..utilities.custom_logger import Logger
 
 
 LOGGER = Logger("../logs/posts_test.log")

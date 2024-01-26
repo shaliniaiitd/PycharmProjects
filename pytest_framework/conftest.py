@@ -4,7 +4,6 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 from configparser import RawConfigParser
-from dotenv import load_dotenv, find_dotenv
 import json
 from dotenv import dotenv_values
 

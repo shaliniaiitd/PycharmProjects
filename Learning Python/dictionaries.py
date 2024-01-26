@@ -1,3 +1,10 @@
+#SORTING A DICTIONARY
+result = {'a': 26, 'b': 32, 'c': 12, 'd': 11, 'e': 8, 'f': 13, 'g': 21}
+result = dict(sorted(result.items(),key=lambda x: x[1]))
+
+print(result)
+
+
 # directory = [{"name":'emp1', "age": 12, "dept": "hr"}, {"name":"emp2", "age" :23, "dept": "it"}, {"name":"emp3", "age":67,"dept": "hr"}]
 #
 # sum_ages =   sum([emp["age"] for emp in directory])

@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/Cypress_API" />
       <excludeFolder url="file://$MODULE_DIR$/pythonProject/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/pythonProject2/pythonProject/venv" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

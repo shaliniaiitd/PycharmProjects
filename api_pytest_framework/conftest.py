@@ -81,13 +81,13 @@ def read_dot_env(request):
 
 @pytest.fixture(scope='class')
 def create_logger(request):
-    if  request.config.getoption("--log-file"):
+    if request.config.getoption("--log-file"):
          log_filename = request.config.getoption("--log-file")
     else:
          log_filename = 'default.log'
 
     logger = Logger(log_filename, log_level = logging.INFO)
-    request.cls.logger =  logger
+
     return logger
 
 def pytest_addoption(parser):
