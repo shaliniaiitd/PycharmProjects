@@ -1,0 +1,106 @@
+[
+  {
+    "pageName": "HomePage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "github_fork_image",
+        "elementType": "Image",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//img",
+        "elementActionMethods": "click,doubleClick,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "form_authentication",
+        "elementType": "Link",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//a[@href='/login']",
+        "elementActionMethods": "click,getText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "h2",
+        "elementType": "Label",
+        "locatorIdentifierType": "tag_name",
+        "locatorIdentifierValue": "h2",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyIsElementPresent,verifyElementText"
+      },
+      {
+        "elementName": "form_username",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "username",
+        "elementActionMethods": "setText,getValue,clearText,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "checkbox_1",
+        "elementType": "CheckBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[1]",
+        "elementActionMethods": "check,unCheck,isChecked,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "checkbox_2",
+        "elementType": "CheckBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[2]",
+        "elementActionMethods": "check,unCheck,isChecked,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "dropdown_1",
+        "elementType": "DropDown",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "dropdown",
+        "elementActionMethods": "selectByIndex,selectByValue,selectByText,getSelectedValue,getSelectedText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "dynamic_page_link",
+        "elementType": "Link",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//a[@href='/%s']",
+        "elementActionMethods": "click,getText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "add_element",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//button",
+        "elementActionMethods": "click,doubleClick,getAttribute,getText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "start_loading",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//div[@id='start']/button",
+        "elementActionMethods": "click,doubleClick,getAttribute,getText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "hello_world",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//div[@id='finish']/h4",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyIsElementPresent,verifyElementText"
+      },
+      {
+        "elementName": "loading",
+        "elementType": "Div",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//div[@id='loading']",
+        "elementActionMethods": "click,getText,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      }
+    ]
+  }
+]

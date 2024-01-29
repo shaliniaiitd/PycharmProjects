@@ -1,0 +1,219 @@
+[
+  {
+    "pageName": "Covid19IndiaPage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "FirstStateValue",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='state-name fadeInUp'])[1]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "SecondStateValue",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='state-name fadeInUp'])[2]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "ThirdStateValue",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='state-name fadeInUp'])[3]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "FirstStateConfirmed",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='delta is-confirmed']/following-sibling::div)[1]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "SecondStateConfirmed",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='delta is-confirmed']/following-sibling::div)[2]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "ThirdStateConfirmed",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='delta is-confirmed']/following-sibling::div)[3]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "FirstStateActive",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[3]/div)[1]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "SecondStateActive",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[3]/div)[2]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "ThirdStateActive",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[3]/div)[3]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+       {
+        "elementName": "FirstStateRecovered",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']//div[@class='delta is-recovered']/following-sibling::div)[1]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "SecondStateRecovered",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[4]/div/following-sibling::div)[2]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "ThirdStateRecovered",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[4]/div/following-sibling::div)[3]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "FirstStateDeceased",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[5]/div/following-sibling::div)[1]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "SecondStateDeceased",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[5]/div/following-sibling::div)[2]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "ThirdStateDeceased",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[5]/div/following-sibling::div)[3]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "ClickFirstStateSeeMore",
+        "elementType": "Link",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//div[@class='state-meta']//span[contains(text(),'See more')]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      },
+       {
+        "elementName": "FirstStateDistrictCount_1",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2)[1]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictName_1",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2/following-sibling::h5)[1]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+       {
+        "elementName": "FirstStateDistrictCount_2",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2)[2]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictName_2",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2/following-sibling::h5)[2]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictCount_3",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2)[3]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictName_3",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2/following-sibling::h5)[3]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictCount_4",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2)[4]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictName_4",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2/following-sibling::h5)[4]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictCount_5",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2)[5]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictName_5",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2/following-sibling::h5)[5]",
+        "elementActionMethods": "",
+        "elementVerificationMethods": "verifyElementText"
+      }
+	
+    ]
+  }
+]

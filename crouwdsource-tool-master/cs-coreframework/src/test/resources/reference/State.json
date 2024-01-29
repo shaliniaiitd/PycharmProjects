@@ -1,0 +1,139 @@
+[
+  {
+    "pageName": "StatePage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "FirstStateValue",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='state-name fadeInUp'])[1]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "SecondStateValue",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='state-name fadeInUp'])[2]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "ThirdStateValue",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='state-name fadeInUp'])[3]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "FirstStateConfirmed",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='delta is-confirmed']/following-sibling::div)[1]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "SecondStateConfirmed",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='delta is-confirmed']/following-sibling::div)[2]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "ThirdStateConfirmed",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='delta is-confirmed']/following-sibling::div)[3]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "FirstStateActive",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[3]/div)[1]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "SecondStateActive",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[3]/div)[2]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "ThirdStateActive",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[3]/div)[3]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+       {
+        "elementName": "FirstStateRecovered",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']//div[@class='delta is-recovered']/following-sibling::div)[1]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "SecondStateRecovered",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[4]/div/following-sibling::div)[2]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "ThirdStateRecovered",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[4]/div/following-sibling::div)[3]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "FirstStateDeceased",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[5]/div/following-sibling::div)[1]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "SecondStateDeceased",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[5]/div/following-sibling::div)[2]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "ThirdStateDeceased",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='table-container']//div[@class='row']/div[5]/div/following-sibling::div)[3]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+      {
+        "elementName": "ClickFirstStateSeeMore",
+        "elementType": "Link",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//div[@class='state-meta']//span[contains(text(),'See more')]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      }
+	
+    ]
+  }
+]

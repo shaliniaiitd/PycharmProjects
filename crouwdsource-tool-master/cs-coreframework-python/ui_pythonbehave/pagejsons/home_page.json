@@ -1,0 +1,306 @@
+[
+  {
+    "pageName": "HomePage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "welcome_username",
+        "elementType": "Link",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//a[@title='Edit your details']",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyIsElementPresent,verifyElementText"
+      },
+      {
+        "elementName": "nav_daily_status_entry",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//td[@class='wpn_menu']//a[text()='Daily Status Entry']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "nav_my_profile",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//td[@class='wpn_menu']//a[text()='My Profile']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "daily_date_box",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='date']",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "daily_hours_spent",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@value='Hours Spent']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "daily_nth_row_hours_spent",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//form/..//tr[@class='dailyheader'][2]/following-sibling::tr[%s]/td[@class='project_name']/label",
+        "elementActionMethods": "getValue,clearText,setText,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "daily_nth_row_comments",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//form/..//tr[@class='dailyheader'][2]/following-sibling::tr[%s]/td[3]/textarea",
+        "elementActionMethods": "getValue,clearText,setText,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "daily_nth_row_start_hour",
+        "elementType": "DropDown",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//form/..//tr[@class='dailyheader'][2]/following-sibling::tr[%s]/td[@class='npj_start_time']/select[@name='nonpro_start_hour[]']",
+        "elementActionMethods": "selectByIndex,selectByValue,selectByText,getSelectedValue,getSelectedText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "daily_nth_row_start_min",
+        "elementType": "DropDown",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//form/..//tr[@class='dailyheader'][2]/following-sibling::tr[%s]/td[@class='npj_start_time']/select[@name='nonpro_start_min[]']",
+        "elementActionMethods": "selectByIndex,selectByValue,selectByText,getSelectedValue,getSelectedText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "daily_nth_row_start_ampm",
+        "elementType": "DropDown",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//form/..//tr[@class='dailyheader'][2]/following-sibling::tr[%s]/td[@class='npj_start_time']/select[@name='nonpro_start_am[]']",
+        "elementActionMethods": "selectByIndex,selectByValue,selectByText,getSelectedValue,getSelectedText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "daily_nth_row_end_hour",
+        "elementType": "DropDown",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//form/..//tr[@class='dailyheader'][2]/following-sibling::tr[%s]/td[@class='npj_end_time']/select[@name='nonpro_end_hour[]']",
+        "elementActionMethods": "selectByIndex,selectByValue,selectByText,getSelectedValue,getSelectedText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "daily_nth_row_end_min",
+        "elementType": "DropDown",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//form/..//tr[@class='dailyheader'][2]/following-sibling::tr[%s]/td[@class='npj_end_time']/select[@name='nonpro_end_min[]']",
+        "elementActionMethods": "selectByIndex,selectByValue,selectByText,getSelectedValue,getSelectedText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "daily_nth_row_end_ampm",
+        "elementType": "DropDown",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//form/..//tr[@class='dailyheader'][2]/following-sibling::tr[%s]/td[@class='npj_end_time']/select[@name='nonpro_end_am[]']",
+        "elementActionMethods": "selectByIndex,selectByValue,selectByText,getSelectedValue,getSelectedText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "daily_save",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@value='Save Time Status']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "daily_clear",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@value='Clear']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "daily_back",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@value='Back']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "daily_success",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//td[@align='center'][text()='Time Sheet Status Saved Successfully']",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_previous",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='previous']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_current",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='current']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_next",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='next']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_nth_day",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//tr[@class='headerStyle']/td[%s]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_mon_nth_project_hours",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//tr[@class='projectsums'][%s]/td[2]/input[@id='projectsum']",
+        "elementActionMethods": "getValue,clearText,setText,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_tue_nth_project_hours",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//tr[@class='projectsums'][%s]/td[3]/input[@id='projectsum']",
+        "elementActionMethods": "getValue,clearText,setText,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_wed_nth_project_hours",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//tr[@class='projectsums'][%s]/td[4]/input[@id='projectsum']",
+        "elementActionMethods": "getValue,clearText,setText,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_thu_nth_project_hours",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//tr[@class='projectsums'][%s]/td[5]/input[@id='projectsum']",
+        "elementActionMethods": "getValue,clearText,setText,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_fri_nth_project_hours",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//tr[@class='projectsums'][%s]/td[6]/input[@id='projectsum']",
+        "elementActionMethods": "getValue,clearText,setText,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_sat_nth_project_hours",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//tr[@class='projectsums'][%s]/td[7]/input[@id='projectsum']",
+        "elementActionMethods": "getValue,clearText,setText,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_sun_nth_project_hours",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//tr[@class='projectsums'][%s]/td[8]/input[@id='projectsum']",
+        "elementActionMethods": "getValue,clearText,setText,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_sum_nth_project_hours",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//tr[@class='projectsums'][%s]/td[@class='footerstyle']",
+        "elementActionMethods": "getValue,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_save",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@value='Save Time Status']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_submit",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@value='Submit Time status']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_clear",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@value='Clear']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_save_success",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//td[@align='center'][text()='Time Sheet Status Saved Successfully with status as pending. Your timesheet status will not be displayed on report page until you hit the Submit Time Status button.']",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "weekly_submit_success",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//td[@align='center'][text()='Time Sheet Status Saved Successfully. You could not reenter timesheet status again.']",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "profile_first_name",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='first_name']",
+        "elementActionMethods": "getValue,clearText,setText,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "profile_last_name",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='last_name']",
+        "elementActionMethods": "getValue,clearText,setText,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent,verifyElementValue"
+      },
+      {
+        "elementName": "profile_doj",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='date_of_join']",
+        "elementActionMethods": "getValue,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent,verifyElementValue"
+      }
+    ]
+  }
+]

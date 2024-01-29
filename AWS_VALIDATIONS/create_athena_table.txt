@@ -1,0 +1,53 @@
+1. The schema and other table properties can be displayed with this command:
+
+SHOW CREATE TABLE default.person_details;
+
+2. Most of the time the Parquets are already created by the pipeline,
+so we just need to create a table based on the S3 location of the files. Note that you need to know the schema to use this syntax. E.g.
+
+CREATE EXTERNAL TABLE default.person_details(
+  we_pid bigint,
+  first_name string,
+  middle_name string,
+  last_name string,
+  suffix string,
+  birth_date int,
+  demographics__gender string,
+  demographics__marital_status string,
+  internal__status string,
+  primary_address__id bigint,
+  networth bigint)
+ROW FORMAT SERDE
+  'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
+STORED AS INPUTFORMAT
+  'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat'
+OUTPUTFORMAT
+  'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
+LOCATION
+  's3://alt-we-tgt-dev-v1/we/dev/feature/summary/person_details/delta/00000000'
+TBLPROPERTIES (
+  'parquet.compression'='SNAPPY')
+
+3. Sometimes we want to create a new table from the results of a query. E.g.
+
+CREATE TABLE default.person_details_wepid
+WITH (
+    parquet_compression='SNAPPY',
+    external_location='s3://alt-we-tgt-dev-v1/we/dev/temp/feature/summary/person_details_wepid/delta/00000000'
+)
+AS
+SELECT DISTINCT we_pid
+FROM default.person_details;
+
+4. When a table is dropped in Athena, the underlying files will not be removed. Remember to remove them if they are no longer needed.
+
+5. Remove double quotes (") and back ticks (`) to simplify the queries. They only make a difference if the identifier names contain the space character.
+
+6. Athena is an interactive query service based on Presto. If you need more info about the built-in functions, you can refer to the reference of Presto.
+
+7. Create the temporary files in s3://{bucket}/we/{env}/{space}/temp/
+
+References:
+https://docs.aws.amazon.com/athena/latest/ug/creating-tables.html
+https://docs.aws.amazon.com/athena/latest/ug/create-table-as.html
+

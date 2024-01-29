@@ -1,0 +1,50 @@
+[
+  {
+    "pageName": "LoginPage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "UserName",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@id='username']",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "Password",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='password']",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "LogIn",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='login']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "Home",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//a[contains(text(),'Home')]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "AdminRegistration",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//a[contains(text(),'Admin Registration')]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      }
+    ]
+  }
+]

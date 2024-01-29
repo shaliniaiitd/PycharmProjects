@@ -1,0 +1,73 @@
+{
+  "java": {
+    "defaultFolder": "src/main/java/com/epam/framework/core/TestContext.java,src/main/java/com/epam/framework/core/Context.java,src/main/java/com/epam/framework/core/constants,src/main/java/com/epam/framework/core/exceptions,src/test/resources",
+    "ui": {
+      "uiDefaultFolder": "src/main/java/com/epam/framework/ui,src/main/java/com/epam/framework/core/utils,src/main/resources/POMconfig.properties,src/main/java/com/epam/framework/runners/cucumber/hooks/UIHooks.java",
+      "selenium": "drivers,src/main/java/com/epam/framework/ui/driver,src/main/java/com/epam/framework/runners/cucumber/hooks/UIHooks.java"
+    },
+    "api": {
+      "apiDefaultFolder": "",
+      "httpclient": "src/main/java/com/epam/framework/api/httpclient",
+      "restassured": "src/main/java/com/epam/framework/api/restassured"
+    },
+    "mobile": {
+      "mobileDefaultFolder": "",
+      "appium": ""
+    },
+    "testmodel": {
+      "testng": "testng.xml",
+      "cucumber-testng": "src/main/java/com/epam/framework/runners/cucumber/CucumberRunner.java,src/main/java/com/epam/framework/runners/cucumber/CucumberTestNGListener.java,src/test/java/com/epam/stepdefinitions",
+      "cucumber-junit": "src/main/java/com/epam/framework/runners/cucumber/CucumberJunitRunner.java,src/main/java/com/epam/framework/runners/cucumber/CucumberJunitHooks.java,src/test/java/com/epam/stepdefinitions",
+      "jbehave": "src/test/java/com/epam/jbehave,src/test/java/com/epam/stepdefinitions"
+    },
+	"db":{
+		"dbUtils":"src/main/java/com/epam/framework/core/dbutils"
+	},
+    "logging": "logs,src/main/java/com/epam/framework/core/logging",
+    "reporting": "src/main/java/com/epam/framework/core/reporting"
+  },
+
+  "python": {
+    "defaultFolder": "taf,utility,__init__.py,readme.txt",
+    "ui": {
+      "uiDefaultFolder": "",
+      "selenium": ""
+    },
+    "api": {
+      "apiDefaultFolder": "",
+      "httpclient": ""
+    },
+    "mobile": {
+      "mobileDefaultFolder": "",
+      "appium": ""
+    },
+    "testmodel": {
+      "testng": "",
+      "cucumber": ""
+    },
+    "logging": "",
+    "reporting": ""
+  },
+
+  "dotnet": {
+    "defaultFolder": "",
+    "ui": {
+      "uiDefaultFolder": "",
+      "selenium": ""
+    },
+    "api": {
+      "apiDefaultFolder": "",
+      "httpclient": ""
+    },
+    "mobile": {
+      "mobileDefaultFolder": "",
+      "appium": ""
+    },
+    "testmodel": {
+      "testng": "",
+      "cucumber": ""
+    },
+    "logging": "",
+    "reporting": ""
+  }
+}

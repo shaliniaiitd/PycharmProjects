@@ -1,0 +1,90 @@
+[
+  {
+    "pageName": "EmployeeRegistrationPage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "EmployeeUserName",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@id='employee_id']",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "EmployeeUserFirstName",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='first_name']",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "EmployeeUserCompanyName",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='company_name']",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "EmployeeUserPassword",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='password']",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "EmployeeUserConfirmPassword",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='confirmpassword']",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "EmployeeUserDateofJoining",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='date']",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "EmployeeUserEmailID",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='emailid']",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "EmployeeUserCountry",
+        "elementType": "select",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//select[@id='country']",
+        "elementActionMethods": "selectByValue",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "EmployeeRateCard",
+        "elementType": "textbox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='rateperhour']",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "SaveDetails",
+        "elementType": "button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//tbody/tr[13]/td[2]/input[1]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      }
+    ]
+  }
+]

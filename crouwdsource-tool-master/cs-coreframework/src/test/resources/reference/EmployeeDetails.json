@@ -1,0 +1,34 @@
+[
+  {
+    "pageName": "EmployeeDetails",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "CreateNewUser",
+        "elementType": "Link",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//a[contains(text(),'Create New User')]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "EditEmployee",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+          "locatorIdentifierValue": "//td[normalize-space()='%s']//following::img[1]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "DeleteEmployee",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//td[normalize-space()='%s']//following::img[3]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      }
+    ]
+  }
+]

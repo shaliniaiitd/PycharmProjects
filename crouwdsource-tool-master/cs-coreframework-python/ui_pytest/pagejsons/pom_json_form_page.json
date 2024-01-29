@@ -1,0 +1,18 @@
+[
+  {
+    "pageName": "HomePage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "github_fork_image",
+        "elementType": "Image",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//img",
+        "elementActionMethods": "click,doubleClick,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      }
+    ]
+  }
+]

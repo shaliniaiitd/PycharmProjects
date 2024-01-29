@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Time Sheet">
+
+    <parameter name="features" value="src/test/resources/features/"/>
+    <parameter name="glue1" value="com.epam.stepdefinitions" />
+    <parameter name="glue2" value="com.epam.framework.runners.cucumber"/>
+    <parameter name="tags" value="@smoke"/>
+
+    <test name="Cucumber tests">
+        <classes>
+            <class name="com.epam.framework.runners.cucumber.testng.CucumberRunner" />
+        </classes>
+    </test>
+</suite>

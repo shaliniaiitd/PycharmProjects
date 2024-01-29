@@ -1,0 +1,74 @@
+[
+  {
+    "pageName": "WDUniversity",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "first_page_link",
+        "elementType": "Link",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "dropdown-checkboxes-radiobuttons",
+        "elementActionMethods": "click,getText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "menu_1",
+        "elementType": "DropDown",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "dropdowm-menu-1",
+        "elementActionMethods": "selectByIndex,selectByValue,selectByText,getSelectedValue,getSelectedText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "menu_2",
+        "elementType": "DropDown",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "dropdowm-menu-2",
+        "elementActionMethods": "selectByIndex,selectByValue,selectByText,getSelectedValue,getSelectedText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "menu_3",
+        "elementType": "DropDown",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "dropdowm-menu-3",
+        "elementActionMethods": "selectByIndex,selectByValue,selectByText,getSelectedValue,getSelectedText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "options",
+        "elementType": "CheckBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//div[@id='checkboxes']//label[%s]/input",
+        "elementActionMethods": "check,unCheck,isChecked,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "radiobuttons",
+        "elementType": "RadioButton",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//form[@id='radio-buttons']//input[%s]",
+        "elementActionMethods": "selectRadioButton,isRadioButtonSelected,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "radio_selected_disabled",
+        "elementType": "RadioButton",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//form[@id='radio-buttons-selected-disabled']//input[%s]",
+        "elementActionMethods": "selectRadioButton,isRadioButtonSelected,getAttribute",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "menu_selected_disabled",
+        "elementType": "DropDown",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//select[@id='fruit-selects']/option[%s]",
+        "elementActionMethods": "selectByIndex,selectByValue,selectByText,getSelectedValue,getSelectedText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      }
+    ]
+  }
+]

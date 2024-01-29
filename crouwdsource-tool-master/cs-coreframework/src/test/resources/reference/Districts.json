@@ -1,0 +1,92 @@
+[
+  {
+    "pageName": "DistrictPage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      
+       {
+        "elementName": "FirstStateDistrictCount_1",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2)[1]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictName_1",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2/following-sibling::h5)[1]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+       {
+        "elementName": "FirstStateDistrictCount_2",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2)[2]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictName_2",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2/following-sibling::h5)[2]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictCount_3",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2)[3]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictName_3",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2/following-sibling::h5)[3]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictCount_4",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2)[4]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictName_4",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2/following-sibling::h5)[4]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictCount_5",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2)[5]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      },
+{
+        "elementName": "FirstStateDistrictName_5",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[@class='district-bar']//div[@class='district']/h2/following-sibling::h5)[5]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText"
+      }
+	
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "pageName": "LoginPage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "username",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "username",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "password",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='password']",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "login",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@name='login']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      }
+    ]
+  }
+]

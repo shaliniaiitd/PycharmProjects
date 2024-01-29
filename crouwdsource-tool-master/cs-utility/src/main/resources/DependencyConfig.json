@@ -1,0 +1,223 @@
+{
+  "java":{
+    "platform":[
+      {
+        "dependencies":[
+          {
+            "dependency":"artifactId: saucerest, dependencyChildNodeList: groupId - artifactId - version"
+          }
+        ]
+      },
+      {
+        "supportedlist":"ui,api,mobile",
+        "ui":[
+          {
+            "dependencies":[
+              {
+                "dependency":""
+              }
+            ]
+          },
+          {
+            "supportedlist":"selenium",
+            "selenium":[
+              {
+                "dependencies":[
+                  {
+                    "dependency":"artifactId: selenium-java, dependencyChildNodeList: groupId - artifactId - version"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "api":[
+          {
+            "dependencies":[
+              {
+                "dependency":"artifactId: json-simple, dependencyChildNodeList: groupId - artifactId - version"
+              },
+              {
+                "dependency":"artifactId: gson, dependencyChildNodeList: groupId - artifactId - version"
+              },
+              {
+                "dependency":"artifactId: json-path, dependencyChildNodeList: groupId - artifactId - version"
+              },
+              {
+                "dependency":"artifactId: jaxb-api, dependencyChildNodeList: groupId - artifactId - version"
+              },
+              {
+                "dependency":"artifactId: jackson-databind, dependencyChildNodeList: groupId - artifactId - version"
+              },
+              {
+                "dependency":"artifactId: jackson-dataformat-xml, dependencyChildNodeList: groupId - artifactId - version"
+              }
+            ]
+          },
+          {
+            "supportedlist":"httpclient,restassured",
+            "httpclient":[
+              {
+                "dependencies":[
+                  {
+                   "dependency":""
+                  }
+                ]
+              }
+            ],
+            "restassured":[
+              {
+                "dependencies":[
+                  {
+                    "dependency":"artifactId: rest-assured, dependencyChildNodeList: groupId - artifactId - version"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "mobile":[
+          {
+            "dependencies":[
+             {
+                "dependency":""
+              }
+            ]
+          },
+          {
+            "supportedlist":"appium",
+            "appium":[
+              {
+                "dependencies":[
+                  {
+                    "dependency":""
+                  }
+                ]
+              }
+            ]
+         }
+        ]
+      }
+    ],
+    "testmodel":[
+      {
+        "dependencies":[
+          {
+            "dependency":""
+          }
+        ]
+      },
+      {
+        "supportedlist":"testng,cucumber-testng,cucumber-junit,jbehave",
+        "testng":[
+          {
+           "dependencies":[
+              {
+                "dependency":"artifactId: testng, dependencyChildNodeList: groupId - artifactId - version"
+              }
+            ]
+         }
+        ],
+        "cucumber-testng":[
+         {
+            "dependencies":[
+              {
+               "dependency":"artifactId: cucumber-testng, dependencyChildNodeList: groupId - artifactId - version"
+              },
+              {
+               "dependency":"artifactId: cucumber-core, dependencyChildNodeList: groupId - artifactId - version"
+              },
+              {
+                "dependency":"artifactId: cucumber-java, dependencyChildNodeList: groupId - artifactId - version"
+              }
+            ]
+         }
+        ],
+        "cucumber-junit":[
+          {
+            "dependencies":[
+              {
+                "dependency":"artifactId: cucumber-core, dependencyChildNodeList: groupId - artifactId - version"
+              },
+              {
+                "dependency":"artifactId: cucumber-java, dependencyChildNodeList: groupId - artifactId - version"
+              },
+              {
+                "dependency":"artifactId: cucumber-junit, dependencyChildNodeList: groupId - artifactId - version"
+              }
+            ]
+          }
+        ],
+        "jbehave":[
+          {
+            "dependencies":[
+              {
+                "dependency":"artifactId: jbehave-core, dependencyChildNodeList: groupId - artifactId - version"
+              },
+              {
+                "dependency":"artifactId: jbehave-junit-runner, dependencyChildNodeList: groupId - artifactId - version"
+              }
+            ]
+          }
+        ]
+     }
+    ],
+		"db": [
+			{
+				"dependencies": [
+					{
+						"dependency": ""
+					}
+				]
+			},
+			{
+				"supportedlist": "oracle,sqlserver,mysql,postgresql,sqlite",
+				"oracle": [
+					{
+						"dependencies": [
+							{
+								"dependency": "artifactId: ojdbc8, dependencyChildNodeList: groupId - artifactId - version"
+							}
+						]
+					}
+				],
+				"sqlserver": [
+					{
+						"dependencies": [
+							{
+								"dependency": "artifactId: mssql-jdbc, dependencyChildNodeList: groupId - artifactId - version"
+							}
+						]
+					}
+				],
+				"mysql": [
+					{
+						"dependencies": [
+							{
+								"dependency": "artifactId: mysql-connector-java, dependencyChildNodeList: groupId - artifactId - version"
+							}
+						]
+					}
+				],
+				"postgresql": [
+					{
+						"dependencies": [
+							{
+								"dependency": "artifactId: postgresql, dependencyChildNodeList: groupId - artifactId - version"
+							}
+						]
+					}
+				],
+				"sqlite": [
+					{
+						"dependencies": [
+							{
+								"dependency": "artifactId: sqlite-jdbc, dependencyChildNodeList: groupId - artifactId - version"
+							}
+						]
+					}
+				]
+			}
+		]
+  }
+}

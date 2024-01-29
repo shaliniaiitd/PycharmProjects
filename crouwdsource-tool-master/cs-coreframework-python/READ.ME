@@ -1,0 +1,76 @@
+# READ ME
+
+Content
+
+# POM Generation
+0. CD into your sub project folder
+1. Mention absolute path of folder containing all pom json in properties->common->utility.config.cfg for variable "json_dir_path"
+2. Mentioned absolute path of root dir in utility.config.cfg for variable "root_dir"
+3. Mention test project folder name in utility.config.cfg for variable "project_folder_name"
+4. Mention pom output dir name in utility.config.cfg for variable "pom_dir_name". It good to set path under ui\pageobjects
+
+NOTE:  MAKE SURE TO RUN BELOW COMMAND FROM THE PATH WHERE properties and Reports DIR ARE PRESENT.
+
+5. Now validate the pom json are valid or not using following command from project root dir.
+    python <path_to_utility>\framework\ui\utils\pom_generator validate
+6. To generate the Page objects at the desired place as per config using following command when no error occurred in validation
+    python path_to_utility>\framework\ui\utils\pom_generator write
+7.  SUPPORTED_COMMANDS = {"validate":"to read the json file and validating it",
+                          "write":"to write the output files after reading and validating the json files",
+                          "v":"shortcut for validate command",
+                          "w":"shortcut for write command",
+                          "help":"To show the available command"}
+
+8. example config values:
+
+config.cfg:
+[common info]
+json_dir_path =  C:\prj\crouwdsource-tool\cs-coreframework-python\ui_pytest_example\pagejsons\
+root_dir = C:\prj\crouwdsource-tool\cs-coreframework-python\
+project_folder_name = ui_pytest_example
+pom_dir_name = pageobjects
+
+
+
+
+
+# Pytest Execution
+
+1. Commands to run
+
+
+### Running Tests:
+ | pytest -v -s tests/test_file |
+
+### To run test and get Junitxml report, which can be understood by Jenkins and other tools.
+ | pytest --junitxml=Reports\junitxml\report.xml
+
+### To run test get simple html report - using pytest-html (https://pytest-html.readthedocs.io/en/latest/user_guide.html)
+ | pytest <test_file/dir> --html=Reports\pytest_html\report.html --self-contained-html
+
+### To run test and update results in reportportal - (make sure to uncomment reporting portal's fixture in conftest.ini)
+ | pytest <test_file/dir> --reportportal
+
+### To run test and get allure report -
+ | pytest <test_file/dir> --alluredir=resources/output/allure_reports
+ | allure serve resources/output/allure_reports  |                                         (make sure to install allure and allure-pytest)
+
+
+
+
+
+
+
+
+
+
+
+
+# Naming Conventions
+
+action methods:
+- <action>_element_name
+    actions - get - to get response
+            - input - input in ui element
+            - set - set something
+            - click - click on anything

@@ -1,0 +1,58 @@
+[
+  {
+    "pageName": "HomePage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "Logout",
+        "elementType": "Link",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//a[contains(text(),'Login')]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "EmployeeDetails",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//a[contains(text(),'Employee Details')]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyelementpresent"
+      },
+      {
+        "elementName": "ProjectDetails",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//a[contains(text(),'Project Details')]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyelementpresent"
+      },
+      {
+        "elementName": "WeeklyStatus",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//a[contains(text(),'Weekly Status')]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyelementtext"
+      },
+      {
+        "elementName": "DailyStatus",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//a[contains(text(),'Daily Status')]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "Report",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//a[contains(text(),'Report')]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      }
+    ]
+  }
+]

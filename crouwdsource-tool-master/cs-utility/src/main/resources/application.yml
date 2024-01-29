@@ -1,0 +1,21 @@
+collab:
+    azure:
+        blob:
+            connection:
+                string: 'DefaultEndpointsProtocol=https;AccountName=collabtoolstorageaccount;AccountKey=eVrBRQjOdiPFjWvGTx01rJjN9hZTKK7f9QZh2GDRo19sVfn13xjHWC/vLFsGPZMPPqOGX9hgno5ZH/3IpuyFWA==;EndpointSuffix=core.windows.net'
+            container:
+                name: 'collabazurecontainer'
+    download:
+        file:
+            name: Collab_Framework.zip
+    git:
+        repo:
+            branch:
+                name: java-master
+            https:
+                url: https://githyd.epam.com/epm-inbl/crouwdsource-tool.git
+            ssh:
+                url: git@githyd.epam.com:epm-inbl/crouwdsource-tool.git
+        user:
+            name: Bharath_Kandukuri@epam.com
+            password: RhSHcL8H1_g3-AzKjrzK
