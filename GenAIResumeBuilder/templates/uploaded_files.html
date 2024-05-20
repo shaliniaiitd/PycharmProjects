@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<br>
+<div id="progress-text"></div>
+<div class="progress" style="height: 15px; background-color: rgb(203, 203, 203); width: 80%; margin: 0 10%;">
+    <div class="bg-green-500" id="progress-bar" style="transition: 800ms;"></div>
+
+</div>
+
+<br>
+<div style="text-align: center;">
+<h3 class="ml-2">Choose a conversion format:</h3>
+    </div>
+<form id="conversion-form" action="{{ url_for('convert') }}" method="post" enctype="multipart/form-data"
+    class="rounded-md bg-indigo-600 px-3.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+
+    <br></br>
+    <div class="container">
+        <label class="inline-flex items-center ml-4">
+            <input type="radio" name="summaryType" value="original">
+            <span class="ml-2">EPAM Format Resume</span>
+        </label>
+        <br>
+        <label class="inline-flex items-center ml-4">
+            <input type="radio" name="summaryType" value="short" checked>
+            <span class="ml-2">Short Executive Summary</span>
+        </label>
+        <br>
+    <label class="inline-flex items-center ml-4">
+        <input type="radio" name="summaryType" value="originalAnd2">
+        <span class="ml-2">Concise Resume</span>
+    </label>
+    </div>
+    <div style="text-align: center;">
+    <button id="convert-button"
+        class="text-white bg-yellow-400 hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900"
+            type="submit" onclick="startTask()">Convert</button>
+         <div class="spinner-border d-none" id="loading-spin" role="status">
+    <span class="sr-only">Converting...</span>
+</div>
+    </div>
+
+</form>
+<br>
+<div style="text-align: center;">
+<h3 class="ml-2">Modify Uploaded Resumes:</h3>
+
+{% for file_name in uploaded_files %}
+<div class="form">
+<td>{{ file_name}}</td>
+<td> </td>
+    <td> <a href ="/delete/{{ file_name }}">Delete</a> </td>
+</div>
+
+{% endfor %}
+
+<br>
+
+<a href ="/add">Add more files for uploading</a>
+
+
+</div>
+<script>
+
+    function updateProgress() {
+        fetch('/progress').then(function (response) {
+            response.json().then(function (data) {
+                document.getElementById("progress-bar").setAttribute("style", "transition: 800ms; width: " + data.progress + "%");
+                document.getElementById("progress-text").innerText = data.progress + "%"; // Update the progress text
+                if (data.progress < 100) {
+                    setTimeout(updateProgress, 500);
+                }
+            })
+        })
+    }
+
+    function startTask() {
+    var loadingDiv = document.getElementById("loading-spin");
+
+
+      loadingDiv.classList.remove("d-none");
+        fetch("/start");
+        updateProgress();
+    }
+</script>
+
+{% endblock %}

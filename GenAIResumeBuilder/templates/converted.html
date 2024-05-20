@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div style="text-align: center;">
+<div class="text-sm font-semibold leading-6 text-gray-900">
+
+    <h3>Following are the Converted Resumes: </h3>
+    {% for file_name in processing_result['converted_resumes'] %}
+    <div>{{ file_name }}</div>
+    {% endfor %}
+
+    <br>
+    <br>
+    <br>
+    <h3>Following Resumes could not be converted: </h3>
+    {% for file_name in processing_result['failed_resumes'] %}
+    <div>{{ file_name }}</div>
+    {% endfor %}
+    <br>
+    <div style="text-align: center;">
+    <br>
+    <br>
+    <div style="text-align: center;" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+    <a href="/download">
+        <button
+            class="text-white bg-yellow-500 hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900"
+            type="submit">Download Converted Resumes</button>
+    </a>
+
+    <br>
+
+    <a href="/">
+        <button
+            class="text-white bg-yellow-500 hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900"
+            type="submit">START FRESH</button>
+    </a>
+        <p>Converted files are deleted after hitting START FRESH.Please download before deletion.</p>
+</div>
+</div>
+
+
+
+{% endblock %}

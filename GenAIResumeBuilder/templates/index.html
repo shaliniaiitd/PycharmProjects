@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+
+      <div class="text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Create Your EPAM Professional Resume
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-gray-600">Generate a professional EPAM format resume in minutes with our
+          easy-to-use resume generator.</p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data"
+            class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <input title="Choose one or more files" type="file" id ="file-input" name="resume" accept=".docx,.doc, .pdf, .jpeg, .jpg" required multiple onchange="enableUploadButton()">
+
+            <br>
+            <br>
+            <button
+              id ="upload-button" class="text-white bg-yellow-400 hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900"
+              type="submit" onclick="loading();" disabled>Upload File(s)</button>
+          </form>
+
+          </div>
+
+          <div  class="mt-10 flex items-center justify-center gap-x-6">
+          <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data"
+            class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <input title="Choose a folder" type="file" id ="folder-input" name="resume" accept=".docx,.doc, .pdf, .jpeg, .jpg" required multiple webkitdirectory onchange="enableUploadFolderButton()">
+
+            <br>
+            <br>
+            <button
+              id ="upload-folder-button" class="text-white bg-yellow-400 hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900"
+              type="submit" onclick="loading();" disabled>Upload File Folder</button>
+          </form>
+          <br>
+
+</div>
+        <div class="spinner-border d-none" id="loading-spin" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+
+  <script>
+  function enableUploadButton() {
+            var fileInput = document.getElementById('file-input');
+            var uploadButton = document.getElementById('upload-button');
+            if (fileInput.files.length > 0) {
+                uploadButton.disabled = false;
+            } else {
+                uploadButton.disabled = true;
+            }
+        }
+
+  function enableUploadFolderButton() {
+            var fileInput = document.getElementById('folder-input');
+            var uploadButton = document.getElementById('upload-folder-button');
+            if (fileInput.files.length > 0) {
+                uploadButton.disabled = false;
+            } else {
+                uploadButton.disabled = true;
+            }
+        }
+    function loading() {
+      var loadingDiv = document.getElementById("loading-spin");
+
+      loadingDiv.classList.remove("d-none");
+    }
+  </script>
+{% endblock %}

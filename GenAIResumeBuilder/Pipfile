@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+easyocr = "*"
+flask = "2.1.0"
+openai = "*"
+pypdf2 = "*"
+python-docx = "*"
+pywin32 = "*"
+werkzeug = "2.2.2"
+python-dotenv = "*"
+textract = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
