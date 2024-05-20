@@ -5,17 +5,28 @@ inpt = 'A man, a plan a canal-Panama'
 inpt = inpt.lower()
 new_inpt = ""
 print(inpt)
+
 exclude_chars = string.whitespace +  string.punctuation
 print(exclude_chars)
 new_inpt = ''.join(el for el in inpt if el not in exclude_chars)
 #new_inpt = ''.join(el for el in inpt if el != " ")
 print(new_inpt)
+print(new_inpt[::-1])
+print("palindrome") if new_inpt == new_inpt[::-1] else print("not palindrome")
+
+#REMOVING DUPLICATES FROM A LIST
+
+mylist = ["a", "b", "a", "c", "c"]
+
+set1 = set(mylist)
+
+print(list(set1))
+
+
 
 #Question: Given a list of integers, implement a function to find the two numbers that sum up to a specific target. Return their indices.
 
-num_list =
-
-for num in num_list:
+# for num in num_list:
 
 # # Write a Python function called find_common_elements(list1, list2) that takes two lists as input and returns a list containing elements that are common to both input lists. The order of elements in the result list should match their order in the first list. If there are no common elements, return an empty list.
 # #

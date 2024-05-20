@@ -90,7 +90,9 @@ inner join department d on e.department_id = d.department_id where d.department_
 
 /*23 Display the department name and total salaries from each department
 select d.department_name, sum(e.salary) from employee e
-inner join department d group by department_name
+inner join department d
+where e.department_id = d.department_id
+ group by department_name
 
 #SELF JOIN
 

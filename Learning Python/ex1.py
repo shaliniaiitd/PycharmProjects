@@ -59,19 +59,27 @@ class Person():
         self.age = age
 
 class Employee(Person):
-    def __init__(self,name,age,role,salary, dept):
-        super().__init__(self,name,age)
+    def __init__(self,person,role,salary, dept):
+        super().__init__(person.name,person.age)
+        self.dept = dept
         self.role = role
         self.salary = salary
 
 class Student(Person):
-    def __init__(self,name,age, dept):
+    def __init__(self,person, dept):
         self.dept = dept
-        super().__init__(self,name,age)
+        super().__init__(person.name,person.age)
 
 class Manager(Employee, Student):
     pass
 
+#create an object of type manager
+shalini = Person("shalini",45)
+emp1 = Employee(shalini,"QA", 23000,"IT")
+std1 = Student(shalini,"Physics")
+mg1 = Manager(emp1,std1)
+
+print(mg1.dept)
 
 
 
@@ -79,50 +87,50 @@ class Manager(Employee, Student):
 # Implement methods for addition, subtraction, multiplication, and division of complex numbers using operator overloading.
 # Test the class by performing various arithmetic operations on complex numbers.
 
-class Complex():
-    def __init__(self, real, img):
-        self.real = real
-        self.img = img
-
-    def display(self):
-        print(f"{self.real} + i{self.img}")
-
-    def __add__(self, a):
-        real = self.real + a.real
-        img = self.img + a.img
-        return Complex(real,img)
-
-n1 = Complex(2,3)
-n2 = Complex(4,5)
-
-n1.display()
-n2.display()
-
-n3 = n1+n2
-n3.display()
-
-# Implement a class Temperature that stores temperature values in Celsius.
-# Write a decorator method that allows you to access the temperature value in Fahrenheit.
-# Implement getters and setters with decorators to convert between Celsius and Fahrenheit.
-
-class Temp():
-    def __init__(self,celsius):
-        self.celsius = celsius
-#Implement getters and setters with decorators suggests using property decorator
-    @property
-    def fahren(self):
-        return (self.celsius*9/5) + 32
-
-    @fahren.setter
-    def fahren(self,value):
-        self.celsius = (value -32)*5/9
-
-#desire usage is
-
-t = Temp(25)
-print(t.celsius) #25
-print(t.fahren)  #77
-t.fahren = 77
-print(t.fahren) #77
-print(t.celsius) #25
-
+# class Complex():
+#     def __init__(self, real, img):
+#         self.real = real
+#         self.img = img
+#
+#     def display(self):
+#         print(f"{self.real} + i{self.img}")
+#
+#     def __add__(self, a):
+#         real = self.real + a.real
+#         img = self.img + a.img
+#         return Complex(real,img)
+#
+# n1 = Complex(2,3)
+# n2 = Complex(4,5)
+#
+# n1.display()
+# n2.display()
+#
+# n3 = n1+n2
+# n3.display()
+#
+# # Implement a class Temperature that stores temperature values in Celsius.
+# # Write a decorator method that allows you to access the temperature value in Fahrenheit.
+# # Implement getters and setters with decorators to convert between Celsius and Fahrenheit.
+#
+# class Temp():
+#     def __init__(self,celsius):
+#         self.celsius = celsius
+# #Implement getters and setters with decorators suggests using property decorator
+#     @property
+#     def fahren(self):
+#         return (self.celsius*9/5) + 32
+#
+#     @fahren.setter
+#     def fahren(self,value):
+#         self.celsius = (value -32)*5/9
+#
+# #desire usage is
+#
+# t = Temp(25)
+# print(t.celsius) #25
+# print(t.fahren)  #77
+# t.fahren = 77
+# print(t.fahren) #77
+# print(t.celsius) #25
+#

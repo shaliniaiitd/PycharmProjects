@@ -47,7 +47,7 @@ class Test_auth(BaseTest):
    #    #request.config.cache.set("login_cred",{"email": "eve.holt@reqres.in","password": "cityslicka","token": resp.json()["token"]})
    #
    #    assert resp.status_code == 200
-
+json.loads
    # def test_register_get_jwt(self,request):
    #    data = json.loads(os.getenv("REGISTER_CRED"))
    #    resp = requests.post("https://reqres.in/api/register",data=data )

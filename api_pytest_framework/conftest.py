@@ -4,7 +4,7 @@ from logging.handlers import RotatingFileHandler
 
 from configparser import RawConfigParser
 import json
-from dotenv import dotenv_values
+import dotenv
 import os
 import pytest
 

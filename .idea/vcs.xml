@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/AWS_SAM/aws-serverless-developer-experience-workshop-python" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/LearningGit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/genai-resume-builder" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pythonProject/INCUBATION" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pythonProject/INCUBATION/API_Testing" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pythonProject/INCUBATION/HomeAssignments/INCUBATION" vcs="Git" />

@@ -1,0 +1,16 @@
+Get Table Variables types
+
+PRAGMA table_info(Students);
+
+SELECT name
+FROM sqlite_master
+WHERE type='table';
+
+SHOW TABLES FROM {DB_NAME};
+
+SELECT *,
+    strftime('%Y', HireDate) as 'HireYear',
+    strftime('%m', HireDate) as 'HireMonth',
+    strftime('%d', HireDate) as 'HireDay'
+FROM Employees;
+

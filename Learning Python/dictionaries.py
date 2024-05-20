@@ -1,8 +1,15 @@
 #SORTING A DICTIONARY
 result = {'a': 26, 'b': 32, 'c': 12, 'd': 11, 'e': 8, 'f': 13, 'g': 21}
-result = dict(sorted(result.items(),key=lambda x: x[1]))
 
-print(result)
+# by keys
+sorted_by_keys = sorted(result.items())
+#or
+sorted_by_keys2 = sorted(result.items(), key = lambda item:item[0])
+
+# sorting by values
+by_values = dict(sorted(result.items(),key=lambda x: x[1]))
+
+print(sorted_by_keys,sorted_by_keys2,by_values)
 
 
 # directory = [{"name":'emp1', "age": 12, "dept": "hr"}, {"name":"emp2", "age" :23, "dept": "it"}, {"name":"emp3", "age":67,"dept": "hr"}]
