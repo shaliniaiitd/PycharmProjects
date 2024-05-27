@@ -1,3 +1,4 @@
+#https://platform.openai.com/docs/api-reference
 from openai import AzureOpenAI
 import json
 import os

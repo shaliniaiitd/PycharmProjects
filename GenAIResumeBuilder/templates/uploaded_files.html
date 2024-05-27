@@ -2,6 +2,21 @@
 
 {% block body %}
 <br>
+    <p id = "snackbar" class = "show" > "PLEASE NOTE: HITTING BACK BROWSER ARROW WILL START A NEW SESSION.</p>
+<style>
+    .show {
+      display:  block !important;
+    }
+    #snackbar {
+      display: none;
+      transition: 300ms;
+      color: red;
+      margin: 0 auto;
+      width: fit-content;
+    }
+  </style>
+<br>
+<div style="text-align: center;">
 <div id="progress-text"></div>
 <div class="progress" style="height: 15px; background-color: rgb(203, 203, 203); width: 80%; margin: 0 10%;">
     <div class="bg-green-500" id="progress-bar" style="transition: 800ms;"></div>
@@ -9,27 +24,31 @@
 </div>
 
 <br>
-<div style="text-align: center;">
+
 <h3 class="ml-2">Choose a conversion format:</h3>
     </div>
 <form id="conversion-form" action="{{ url_for('convert') }}" method="post" enctype="multipart/form-data"
     class="rounded-md bg-indigo-600 px-3.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
 
     <br></br>
-    <div class="container">
-        <label class="inline-flex items-center ml-4">
-            <input type="radio" name="summaryType" value="original">
+    <div class="container" style="display: flex; justify-content: space-evenly;">
+        <label class="items-center ml-4" style="display: flex;flex-direction: column;">
+            <img src="{{ url_for('static', filename='epam_format.png') }}" style="scale:0.75">
             <span class="ml-2">EPAM Format Resume</span>
+            <input type="radio" name="summaryType" value="original">
+
         </label>
         <br>
-        <label class="inline-flex items-center ml-4">
-            <input type="radio" name="summaryType" value="short" checked>
+        <label class="items-center ml-4" style="display: flex;flex-direction: column;">
+             <img src="{{ url_for('static', filename='short_format.png') }}" style="scale:0.75">
             <span class="ml-2">Short Executive Summary</span>
+            <input type="radio" name="summaryType" value="short" checked>
         </label>
         <br>
-    <label class="inline-flex items-center ml-4">
-        <input type="radio" name="summaryType" value="originalAnd2">
+    <label class="items-center ml-4" style="display: flex;flex-direction: column;">
+        <img src="{{ url_for('static', filename='concise_format.png') }}" style="scale:0.75">
         <span class="ml-2">Concise Resume</span>
+        <input type="radio" name="summaryType" value="concise">
     </label>
     </div>
     <div style="text-align: center;">
@@ -56,12 +75,14 @@
 {% endfor %}
 
 <br>
-
 <a href ="/add">Add more files for uploading</a>
-
 
 </div>
 <script>
+window.onload(() => {
+ var x = document.getElementById('snackbar');
+ setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+})
 
     function updateProgress() {
         fetch('/progress').then(function (response) {
@@ -76,9 +97,11 @@
     }
 
     function startTask() {
+    var convertButton = document.getElementById("convert-button");
+
+    convertButton.setAttribute("class","text-white bg-gray-400 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2")
+    convertButton.setAttribute("style","cursor:none")
     var loadingDiv = document.getElementById("loading-spin");
-
-
       loadingDiv.classList.remove("d-none");
         fetch("/start");
         updateProgress();

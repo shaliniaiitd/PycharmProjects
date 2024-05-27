@@ -22,9 +22,15 @@
     <br>
     <div style="text-align: center;" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
     <a href="/download">
+        {% if processing_result["converted_resumes"]|length >0 %}
         <button
             class="text-white bg-yellow-500 hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900"
             type="submit">Download Converted Resumes</button>
+        {% else %}
+        <button
+            class="text-white bg-gray-500  font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 "
+            type="submit" style="cursor:none" disabled >Download Converted Resumes</button>
+        {% endif %}
     </a>
 
     <br>
@@ -32,9 +38,9 @@
     <a href="/">
         <button
             class="text-white bg-yellow-500 hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900"
-            type="submit">START FRESH</button>
+            type="submit">START OVER</button>
     </a>
-        <p>Converted files are deleted after hitting START FRESH.Please download before deletion.</p>
+        <p>Converted files are deleted after hitting START OVER.Please download before deletion.</p>
 </div>
 </div>
 

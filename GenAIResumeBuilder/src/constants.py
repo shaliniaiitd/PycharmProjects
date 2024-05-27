@@ -2,6 +2,7 @@ class Config:
     AZURE_OPENAI_ENDPOINT = "https://ai-proxy.lab.epam.com"
     AZURE_CHAT_DEPLOYMENT_NAME = "gpt-35-turbo-16k"
     AZURE_OPENAI_API_VERSION = "2023-03-15-preview"
+    AZURE_OPENAI_API_KEY ="sSZd5Q9IoKB3v8A2IUcET3BlbkFJop19hI3ykBC50Z107JV7"
 
     TEMPERATURE = 0
     MAX_TOKENS = 60

@@ -37,8 +37,11 @@ AZURE_OPENAI_API_KEY = "<API_KEY>"
 
 ### Install required modules
 
-pip install all packages mentioned in Pipfile.  
-download antiword from the internet
+### pip install all packages mentioned in Pipfile.  
+python.exe -m pip install --upgrade pip
+ pip install flask pywin32 python-docx PyPDF2 easyocr textract openai python-dotenv
+
+### download antiword from the internet
 extract zip file in C drive
 add the address C:/antiword to path variable among user variables
 create a new user variable called "ANTIWORDHOME" with same value, i.e C:/antiword

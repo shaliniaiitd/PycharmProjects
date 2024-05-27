@@ -17,8 +17,8 @@
             <br>
             <br>
             <button
-              id ="upload-button" class="text-white bg-yellow-400 hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900"
-              type="submit" onclick="loading();" disabled>Upload File(s)</button>
+              id ="upload-button" class="text-white bg-gray-400 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900"
+              type="submit" style="cursor:none" disabled onclick="loading();"onclick="loading();" >Upload File(s)</button>
           </form>
 
           </div>
@@ -31,8 +31,8 @@
             <br>
             <br>
             <button
-              id ="upload-folder-button" class="text-white bg-yellow-400 hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900"
-              type="submit" onclick="loading();" disabled>Upload File Folder</button>
+              id ="upload-folder-button" class="text-white bg-gray-400 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900"
+              type="submit" style="cursor:none" disabled onclick="loading();" >Upload File Folder</button>
           </form>
           <br>
 
@@ -48,8 +48,8 @@
             var uploadButton = document.getElementById('upload-button');
             if (fileInput.files.length > 0) {
                 uploadButton.disabled = false;
-            } else {
-                uploadButton.disabled = true;
+                uploadButton.setAttribute("class","text-white bg-yellow-400 hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900")
+                uploadButton.setAttribute("style","cursor:arrow")
             }
         }
 
@@ -58,8 +58,8 @@
             var uploadButton = document.getElementById('upload-folder-button');
             if (fileInput.files.length > 0) {
                 uploadButton.disabled = false;
-            } else {
-                uploadButton.disabled = true;
+                uploadButton.setAttribute("class","text-white bg-yellow-400 hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900")
+                uploadButton.setAttribute("style","cursor:arrow")
             }
         }
     function loading() {

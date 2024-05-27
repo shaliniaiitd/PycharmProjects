@@ -10,6 +10,14 @@
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <title>ResumeGen</title>
   {% block head %}{% endblock %}
+<script>
+  // Push the static page into the browser history
+window.addEventListener('beforeunload', function() {
+  //alert('You pressed the back button, START AGAIN!');
+  history.pushState(null, null, '/');
+
+});
+</script>
 </head>
 
 <body class="font-sans bg-white">
@@ -25,8 +33,7 @@
     </nav>
     {% block header %}{% endblock %}
   </header>
-
-
   {% block body %}{% endblock %}
+<br>
  </body>
 </html>
