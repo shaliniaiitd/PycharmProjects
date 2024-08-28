@@ -95,23 +95,6 @@ def test2(request):
 #     return url
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # def test_user_creation_json():
 #     #read payload from a file
 #     logger = LogGen.loggen()
