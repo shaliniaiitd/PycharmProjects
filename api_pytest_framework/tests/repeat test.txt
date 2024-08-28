@@ -1,0 +1,98 @@
+Running the same pytest multiple times can be useful for various reasons, such as testing stability, checking for flaky tests, or conducting performance evaluations. Here are several methods to run the same pytest multiple times:
+1. Using --count with pytest-repeat Plugin:
+
+The easiest and most straightforward way to run the same test multiple times is by using the pytest-repeat plugin, which provides a --count option.
+Installation:
+
+First, install the plugin if you haven't already:
+
+bash
+
+pip install pytest-repeat
+
+Usage:
+
+Use the --count option followed by the number of times you want the test to run:
+
+bash
+
+pytest --count=5 test_file.py
+
+This command will run all the tests in test_file.py five times.
+
+If you want to run a specific test multiple times, use the -k option:
+
+bash
+
+pytest --count=3 -k "test_name"
+
+This will run the specified test (test_name) three times.
+2. Using a Loop Inside the Test Function:
+
+If you need more control within a single test function, you can use a loop inside the test function itself. This approach is useful for running specific code or setup multiple times.
+
+python
+
+import pytest
+
+@pytest.mark.parametrize("run", range(3))  # Runs the test 3 times
+def test_sample(run):
+    print(f"Running test iteration {run + 1}")
+    assert True  # Replace with actual test logic
+
+3. Using pytest Fixtures with Loop:
+
+You can use a fixture to run a test multiple times by looping inside the fixture and using pytest.mark.parametrize:
+
+python
+
+import pytest
+
+@pytest.fixture(params=range(5))  # Runs the test 5 times
+def repeat_fixture(request):
+    return request.param
+
+def test_repeat(repeat_fixture):
+    print(f"Test run {repeat_fixture + 1}")
+    assert True  # Replace with your actual test logic
+
+4. Using a Custom pytest Hook in conftest.py:
+
+You can create a custom pytest hook in the conftest.py file to repeat tests based on a specific condition:
+
+python
+
+# conftest.py
+def pytest_runtest_protocol(item, nextitem):
+    if item.name == "test_repeat":
+        for i in range(5):  # Run 5 times
+            item.runtest()
+        return True  # Skip the default run
+
+5. Using a Shell Script or Command Line Loop:
+
+For running the tests multiple times from the command line or a CI/CD pipeline, you can use a simple loop:
+Bash Example:
+
+bash
+
+for i in {1..5}; do
+  pytest test_file.py
+done
+
+Windows Batch File Example:
+
+batch
+
+FOR /L %%i IN (1,1,5) DO pytest test_file.py
+
+These loops will run the tests in test_file.py five times.
+Summary:
+
+    pytest-repeat Plugin: Easiest and most flexible way with --count.
+    Parametrization: Use @pytest.mark.parametrize to loop inside the test.
+    Fixtures: Loop with fixtures to repeat tests.
+    Custom Hooks: Create hooks in conftest.py for more tailored control.
+    Command Line Loops: Use shell scripting for external control of repetitions.
+
+These methods provide a variety of ways to run tests multiple times, catering to different levels of control and requirements.
