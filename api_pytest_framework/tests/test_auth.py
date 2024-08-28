@@ -38,15 +38,15 @@ class Test_auth(BaseTest):
    #
    #    #assert resp.headers["Content-Type"] == "text/html;charset=utf-8"
 
-   # def test_login_get_jwt(self,request):
-   #    login_cred = json.loads(os.getenv("LOGIN_CRED"))
-   #    print(login_cred)
-   #    resp = requests.post("https://reqres.in/api/login", data=login_cred)
-   #    self.logger.info(resp.json()) #{'token': 'QpwL5tke4Pnpja7X4'}
-   #
-   #    #request.config.cache.set("login_cred",{"email": "eve.holt@reqres.in","password": "cityslicka","token": resp.json()["token"]})
-   #
-   #    assert resp.status_code == 200
+   def test_login_get_jwt(self,request):
+      login_cred = json.loads(os.getenv("LOGIN_CRED"))
+      print(login_cred)
+      resp = requests.post("https://reqres.in/api/login", data=login_cred)
+      self.logger.info(resp.json()) #{'token': 'QpwL5tke4Pnpja7X4'}
+   
+      #request.config.cache.set("login_cred",{"email": "eve.holt@reqres.in","password": "cityslicka","token": resp.json()["token"]})
+   
+      assert resp.status_code == 200
 json.loads
    # def test_register_get_jwt(self,request):
    #    data = json.loads(os.getenv("REGISTER_CRED"))
@@ -55,5 +55,30 @@ json.loads
    #    self.logger.info(resp.json()) #{'id': 4, 'token': 'QpwL5tke4Pnpja7X4'}
    #
    #    assert resp.status_code == 200
+
+#send jwt in further tests by sending the token in headers Authorization tag as follows:
+
+def test_using_jwt(self,request):
+   # Use the token to authenticate further requests
+        headers = {
+            "Authorization": f"Bearer {token}"
+        }
+
+        # Example of accessing a protected endpoint with JWT
+        protected_resp = requests.get("https://reqres.in/api/protected", headers=headers)
+        assert protected_resp.status_code == 200
+
+# test using api_key
+def test_using_api_key(self,request):
+   api_key = "your_api_key"
+   headers = {
+       "x-api-key": api_key
+   }
+
+   response = requests.get('https://example.com/api', headers=headers)
+
+assert response.status_code == 200
+
+   
 
 
