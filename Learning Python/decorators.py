@@ -19,13 +19,9 @@
 # def fact(n):
 #     import time
 #     time.sleep(2)
-#     fact = 1
-#     if n <=1:
-#         return fact
-#     else:
-#         for i in range(2,n+1):
-#             fact =  i*fact
-#     return fact
+        if n == 1:
+        return 1
+    return n*fact(n-1)
 #
 # print(fact(100))
 
