@@ -2,19 +2,19 @@
 
 list1 = [1,6,12,5,9,10,34,2,3]
 target = 14
-result = []
-success = 0
-for i in range(len(list1)-1):
+def sum_target(l, t):
+    result = set()
+    seen = {}  # Dictionary to store index of elements
 
- for j in range(i,len(list1)-1):
-   if list1[i] + list1[j] == target:
-     result.append((i,j))
-     success = 1
+    for i, num in enumerate(l):
+        target = t - num
+        if target in seen:  # Check if target was seen before
+            result.add(tuple(sorted((i, seen[target]))))  # Store tuple instead of list
+        seen[num] = i  # Store index of current number
 
- # if success == 1:
- #     break
+    return result
 
-print(result)
+print(sum_target(list1,target)
 
 #5. Try following code and note down the observations:
 t6 = 1, 2, 3
