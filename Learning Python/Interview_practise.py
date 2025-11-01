@@ -13,8 +13,38 @@ def sum_target(l, t):
         seen[num] = i  # Store index of current number
 
     return result
-
 print(sum_target(list1,target)
+
+
+#Given a list of integers, find the two numbers that sum closest to zero.
+
+lst = [1, 2,6,7,-2, -3]
+left = 0
+right = len(lst) -1
+result = None
+
+min_sum = float('inf')
+lst.sort()
+print(lst)
+
+while lst[left] < lst[right]:
+    current_sum = lst[left] + lst[right] 
+    
+    # if min_sum > current_sum:
+    #     min_sum = current_sum
+    result_pair = [lst[left], lst[right]] 
+     
+    if current_sum == 0:
+            #print (result_pair,current_sum)
+            break
+    elif current_sum < 0:
+        left = left +1
+    else:
+        right = right -1
+       
+        
+print(result_pair,current_sum)
+
 
 #5. Try following code and note down the observations:
 t6 = 1, 2, 3
