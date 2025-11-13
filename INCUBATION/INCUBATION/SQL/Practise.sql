@@ -11,25 +11,17 @@ select max(salary) from employee where salary Not In select max(salary) from emp
 select * from employee where employee_id between min and max
 
 /*5. return an employee with the highest salary and the employee's  department_name*/
+select e.emp_id,e.salary, d.name from employee e inner join departmenet d on e.dept_id = department.id where e.salary = (select max(salary) from employee)  
 
-select e.employee_name, d.department_name
-from employee e
-inner join department  d
-on e.department_id = d.department_id
-where e.salary IN select max(salary) from employee
 
 /*6. Return highest salary, employee_name, department_name for each department*/
-
-select e.salary, e.employee_name,d.department_name from employee e
-inner join department d
- on e.department_id = d.department_id
- where e.salary IN (select MAX(salary) from employee  group by department_id)
+select e.name, d.name from employee e inner join department d on e.dept_id = d.id where (e.dept_id,e.salary) in (select dept_id,max(salary) from employee group by dept_id)
 
 /*7 select DISTINCT name as new_column from employee
 
 /*8 Fetch all duplicate records in a table
 
-select * from employee where name NOT In (select DISTINCT name from employee)
+select <unique_col>, count(*) as duplicate_count from employee group by (<unique col> having count(*) >1 
 
 /*9 display department-wsie highest salary
 
@@ -70,28 +62,44 @@ select names from employee where name like '___M'
 select names from employee where name like '%L%l%'
 
 /*19 names and hire dates for the employees joined in the month of December
-select name, hire_date from employee where hire_date like "%DEC%"
+select name, hire_date from employee where MONTH(hire_date) = 12 
 
 /*20 names starting with J and ends with S
 where name like 'J%S'
 
-/*21 Display nth row in a table. Rownum does not work with = and >; can only use < and = operators.
+/*21 Display nth row in a table. Rownum does not work with = and >; can only use < and = operators.Rownum works only in OLD ORACLE.
 
-select * from (select employee.*, rowcount rn from employee) where rn = n
+select * from (select employee.*, rownum rn from employee) where rn = n
+/* FOR SQL SERVER/MYSQL, use window function ROW_NUMBER instead
+select * from (select *,ROW_NUMBER OVER(ORDER BY salary Desc) from employee) as rn where rn =3
+
 
 #UNION all INCLUDES DUPLICATES
 
 #INNER JOINS - there must be matching row in right table for the row in left table
-/*22  Display employees who are working in location Chicago from emp and dept table
+Table1 Table2
+1       1
+1       1
+1       2
+2       2
+4       5
+How many rows would result from following:
+INNER JOIN - 1X2 + 1X2 + 1X2 + 1X2  = 8
+LEFT JOIN (1 left join2) = 6 + 1X2 +1 = 9
+RIGHT JOIN(1 right join 2) = 2X3 + 2X1 + 1 = 9
+OUTER (FULL) JOIN = 8+2 = 10
+CROSS JOIN = 5X5 = 25
 
+
+/*22  Display employees who are working in location Chicago from emp and dept table
 select names from employee e
-inner join department d on e.department_id = d.department_id where d.department_name = 'Chicago'
+inner join department d on e.department_id = d.department_id where d.location = 'Chicago'
 
 
 /*23 Display the department name and total salaries from each department
 select d.department_name, sum(e.salary) from employee e
 inner join department d
-where e.department_id = d.department_id
+on e.department_id = d.department_id
  group by department_name
 
 #SELF JOIN
@@ -101,8 +109,8 @@ where e.department_id = d.department_id
 select e1.* from employee e1, employee e2 where e1.MGR = e2.id and e1.salary>e2.salary
 
 /*25 Display the employee details who joined before their manager */
+select e1.* from  employee e1, employee e2 where e1.mgr = e2.id and e1.join_date < e2.join_date
 
-select e1.* from employee e1, employee e2 where e1.MGR = e2.id and e1.hire_date >e2.hire_date
 
 #LEFT JOIN - All rows from left table and matching rows from right table are displayed
 
@@ -114,9 +122,10 @@ select e1.* from employee e1, employee e2 where e1.MGR = e2.id and e1.hire_date 
 #DISPLAY FIRST n rows or last n rows
 
 /*27 Display first and last row of a table
-select * from (select emp.*,rownum rn from emp ) where rn = 1 or r = (select count(*) from emp)
+select * from (select emp.*,rownum rn from emp ) where rn = 1 or rn = select count(*) from employee
 
 /*28 Display last 2 rows of a table
+
 select * from (select emp.*,rownum rn from emp ) where rn > (select count(*) -2 from emp)
 /*29 Display first and last 2 rows of the table
 select * from (select emp.*,rownum rn from emp ) where rn in(1,2) or rn > (select count(*) -2 from emp)
@@ -124,11 +133,23 @@ select * from (select emp.*,rownum rn from emp ) where rn in(1,2) or rn > (selec
 #Nth HIGHEST record
 
 /*30 Display nth highest salary
-#Get highest salary
 
-select * from (select distinct salary from emp order by salary desc) where rownum <= n
-minus
-select * from (select distinct salary from emp order by salary desc) where rownum <= n-1
+
+select * from (select distinct salary,rownum  from emp order by salary desc) where rownum = n
+/* USING ROW_NUMBER = nth highest salary
+select * from (select salary,ROW_NUMBER() OVER(Order by salary desc) as RN from employee) where RN =n
+
+/* RANK employee salaries
+
+select salary, RANK() OVER(order by salary desc) as salary_rank from employee 
+
+/* DENSE_RANK - doesnt skip rank in case of a tie
+select salary, DENSE_RANK() OVER(order by salary desc) as salary_rank from employee 
+
+/*PARTITION BY - used in place of group by inside OVER() to aggregate over a column. Does not summarise the rows(like group by) but displays the aggregate value as additional column with all rows. 
+select salary, RANK() OVER(PARTITION BY department_id order by salary desc) as salary_rank from employee - gives department wise salary ranks
+
+
 
 
 
