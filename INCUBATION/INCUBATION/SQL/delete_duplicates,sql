@@ -1,3 +1,10 @@
 delete from table t1 inner join table t2
 where t1.id > t2.id
 and t1.col_name = t2.col_name(name of col(s) which is(are) duplicate(s))
+
+BETTER SOLUTION
+
+WITH duplicates as 
+(select *, row_number() OVER(order by id) as rn from table)
+
+delete from table where id in (select id from duplicates where rn >1)
